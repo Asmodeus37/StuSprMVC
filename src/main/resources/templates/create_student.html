@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Student</title>
+    <link href="https://spring.io/images/favicon-9d25009f65637a49ac8d91eb1cf7b75e.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -36,18 +37,10 @@
     <div class ="container">
         <div class = "row">
             <div class = "col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
-                <h1 class = "text-center"> Create New Student </h1>
+                <h1 class = "text-center"> Add New Student </h1>
                 <div class = "card-body">
                     <form th:action="@{/students}" th:object= "${student}" method="POST">
-                        <div class ="form-group">
-                            <label> Student First Name </label>
-                            <label for="firstName"></label><input type = "text"
-                                                                  name = "firstName"
-                                                                  id="firstName"
-                                                                  th:field = "*{firstName}"
-                                                                  class="form-controller"
-                                                                  placeholder="Enter First Name"/>
-                        </div>
+
 
                         <div class ="form-group">
                             <label> Student Last Name </label>
@@ -57,6 +50,16 @@
                                                                  th:field="*{lastName}"
                                                                  class="form-controller"
                                                                  placeholder="Enter Last Name"/>
+                        </div>
+
+                        <div class ="form-group">
+                            <label> Student First Name </label>
+                            <label for="firstName"></label><input type = "text"
+                                                                  name = "firstName"
+                                                                  id="firstName"
+                                                                  th:field = "*{firstName}"
+                                                                  class="form-controller"
+                                                                  placeholder="Enter First Name"/>
                         </div>
 
                         <div class ="form-group">
