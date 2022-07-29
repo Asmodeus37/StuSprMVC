@@ -41,4 +41,9 @@ public class StudentsController {
         studentService.deleteStudentById(id);
         return "redirect:/students";
     }
+
+    @RequestMapping("/")
+    public String defectDetails() {
+        return "index";
+    }
 }
